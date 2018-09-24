@@ -1,0 +1,23 @@
+ <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>Contact</th>
+                <th>Edit</th>
+                <th>Delete</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for stu in table_data %}
+            <tr>
+                <td>{{stu.name}}</td>
+                <td>{{stu.city}}</td>
+                <td>{{stu.number}}</td>
+                <td><a href="javaScript:void(0);"  data-attr="{{stu.s_id}}" class="btn btn-primary btn-edit">Edit</a></td>
+                <td><a href="javaScript:void(0);" data-attr="{{stu.s_id}}" class="btn btn-danger btn-delete">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
